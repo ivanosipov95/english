@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'english-helper';
+
+  data: Observable<any>;
+
+  constructor(private http: HttpClient) {
+  }
+
+
+  public auth() {
+    const url = '/api/auth/login';
+
+    const user = {
+      email: 'test',
+      password: 'test'
+    };
+
+    this.data = this.http.post(url, user);
+  }
 }
