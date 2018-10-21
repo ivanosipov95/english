@@ -3,11 +3,11 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'sign-in',
+  templateUrl: './sign-in.component.html',
+  styleUrls: ['./sign-in.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class SignInComponent implements OnInit {
   loginForm: FormGroup;
 
   constructor(private fb: FormBuilder, private http: HttpClient) { }
@@ -16,11 +16,12 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
       password: ['', Validators.required],
-      });
+    });
   }
 
   onSubmit() {
-    this.http.post('/api/auth/login', this.loginForm.value)
+    this.http.post('/api/auth/sing-card', this.loginForm.value)
       .subscribe(console.log);
   }
+
 }

@@ -1,10 +1,16 @@
+@import "../assets/mixins/colors";
+
 .app {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   height: 100vh;
+  background: $app-backgroud;
 
   &__form {
-
+    margin: 150px;
+    width: 30%;
+    height: 50%;
   }
 }

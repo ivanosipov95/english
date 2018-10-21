@@ -61,7 +61,7 @@ const register = async (req, res) => {
   }
 };
 
-router.post('/auth/login', login);
+router.post('/auth/sing-card', login);
 router.post('/auth/register', register);
 router.get('/auth/test', passport.authenticate('jwt', {session: false}), (req, res) =>  res.status(200).json({}));
 
