@@ -4,15 +4,18 @@
 
   <div>
     input
-    <input>
+    <input (confirmByEnter)="change('custom function')">
   </div>
 
 
   <div>
     textarea
-    <textarea></textarea>
+    <textarea confirmByEnter test></textarea>
   </div>
 
+  <div>
+    {{count}}
+  </div>
 
 </div>
 
