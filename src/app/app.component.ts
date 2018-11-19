@@ -7,17 +7,5 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-
-  count = 0;
-
-  constructor() {
-    setTimeout(() => {
-      this.count = 5;
-    }, 100);
-  }
-
-  public change(test): void {
-    console.log(test);
-  }
 }
 
