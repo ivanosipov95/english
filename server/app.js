@@ -23,5 +23,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.use(api, rest.authRouter);
+app.use(api, rest.lingualeoRouter);
 
 module.exports = app;

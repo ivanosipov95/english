@@ -1,4 +1,5 @@
-module.exports = {
-  mongoURI: 'mongodb://admin:admin95@ds131753.mlab.com:31753/english-helper',
-  jwt: 'dev-server'
-};
+if (process.env.NODE_ENV === 'production') {
+  module.exports = require('./config.prod');
+} else {
+  module.exports = require('./config.dev');
+}

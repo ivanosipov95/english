@@ -3,7 +3,7 @@
 .app {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   height: 100vh;
   background: $app-backgroud;
@@ -13,4 +13,14 @@
     width: 30%;
     height: 50%;
   }
+}
+
+button:disabled {
+  background: #dddddd;
+}
+
+
+.notification {
+  background: aqua;
+  color: #000;
 }

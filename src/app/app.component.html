@@ -1,5 +1,20 @@
 <div class="app">
-  <sign-card class="app__form"></sign-card>
+  <!--<sign-card class="app__form"></sign-card>-->
+
+  <div>
+    <input placeholder="Название словаря" [(ngModel)]="dictionaryName">
+    <button (click)="createDictionary()" [disabled]="dictionaryId">Добавить</button>
+  </div>
+
+  <div>
+    <input placeholder="Новое слово" [(ngModel)]="sourceWord">
+    <input placeholder="Перевод" [(ngModel)]="translatedWord">
+    <button (click)="addWord()">Добавить слово</button>
+  </div>
+
+  <div class="notification" *ngIf="isWordAddedSuccessfully">
+    Новое слово успешно добавлено!
+  </div>
 </div>
 
 
