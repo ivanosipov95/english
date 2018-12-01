@@ -1,6 +1,10 @@
 {
   "name": "english-helper",
   "version": "0.0.0",
+  "engines": {
+    "node": "10.11.0",
+    "npm": "6.4.1"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json",
@@ -8,7 +12,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "server": "nodemon ./server/index"
+    "server": "nodemon ./server/index",
+    "heroku-postbuild": "npm run build",
+    "start-prod": "node ./server/index"
   },
   "private": true,
   "dependencies": {
