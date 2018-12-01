@@ -43,9 +43,7 @@
     "passport-jwt": "^4.0.0",
     "rxjs": "~6.2.0",
     "superagent": "^4.0.0",
-    "zone.js": "~0.8.26"
-  },
-  "devDependencies": {
+    "zone.js": "~0.8.26",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
@@ -61,5 +59,8 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0"
+  },
+  "devDependencies": {
+
   }
 }
