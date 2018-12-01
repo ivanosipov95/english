@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {AppService} from './app.service';
-import {switchMap, tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -26,14 +25,12 @@ export class AppComponent {
   }
 
   addWord(): void {
-    this.appService.getWord(this.sourceWord, this.dictionaryId).pipe(
-      tap(d => console.log(d)),
-      switchMap(({wordId}) => this.appService.addWord(this.sourceWord, this.translatedWord, wordId, this.dictionaryId))
-    ).subscribe(data => {
-      this.isWordAddedSuccessfully = true;
+    this.appService.addWord(this.sourceWord, this.translatedWord)
+      .subscribe(data => {
+        this.isWordAddedSuccessfully = true;
 
-      setTimeout(() => this.isWordAddedSuccessfully = false, 3000);
-    });
+        setTimeout(() => this.isWordAddedSuccessfully = false, 3000);
+      });
   }
 }
 

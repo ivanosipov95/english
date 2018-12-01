@@ -16,19 +16,10 @@ export class AppService {
     });
   }
 
-  getWord(sourceWord, dictionaryId): Observable<any> {
-    return this.http.post('/api/lingualeo/get-word', {
-      sourceWord,
-      dictionaryId
-    });
-  }
-
-  addWord(sourceWord, translatedWord, wordId, dictionaryId): Observable<any> {
+  addWord(sourceWord, translatedWord): Observable<any> {
     return this.http.post('/api/lingualeo/add-word', {
       sourceWord,
-      translatedWord,
-      wordId,
-      dictionaryId
+      translatedWord
     });
   }
 }
