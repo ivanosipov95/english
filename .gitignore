@@ -1,12 +1,17 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# compiled output
-/dist
-/tmp
-/out-tsc
+# client
+/client/dist
+/client/tmp
+/client/out-tsc
+
+# server
+server/config/config.dev.js
 
 # dependencies
-/node_modules
+/client/node_modules
+/server/node_modules
+node_modules
 
 # IDEs and editors
 /.idea
@@ -37,5 +42,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-server/config/config.dev.js
